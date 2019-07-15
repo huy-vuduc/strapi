@@ -16,6 +16,7 @@ type Article {
   fb_cta: String!
   mainIngredient: String
   ingredients: String
+  pictures(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
   linkedTags(sort: String, limit: Int, start: Int, where: JSON): [Tag]
   manyTags(sort: String, limit: Int, start: Int, where: JSON): [Tag]
 }
@@ -31,6 +32,7 @@ input ArticleInput {
   enum: ENUM_ARTICLE_ENUM
   bool: Boolean
   pic: ID
+  pictures: [ID]
   mainTag: ID
   linkedTags: [ID]
   manyTags: [ID]
@@ -119,6 +121,7 @@ input editArticleInput {
   enum: ENUM_ARTICLE_ENUM
   bool: Boolean
   pic: ID
+  pictures: [ID]
   mainTag: ID
   linkedTags: [ID]
   manyTags: [ID]
