@@ -24,7 +24,7 @@
       "type": "integer"
     },
     "json": {
-      "type": "string"
+      "type": "json"
     },
     "number": {
       "type": "integer"
@@ -72,10 +72,6 @@
       "repeatable": true,
       "min": 1,
       "max": 10
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "articles"
     }
   }
 }
